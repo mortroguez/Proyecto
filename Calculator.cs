@@ -61,10 +61,6 @@ namespace Proyecto
                             default:
                                 break;
                         }
-                        if (!string.IsNullOrEmpty(observation))
-                        {
-                            // TODO: Write .txt
-                        }
                         calculatorHistory.Add(new()
                         {
                             Expression1 = txt_expression_i.Text,
@@ -75,7 +71,6 @@ namespace Proyecto
                     }
                     else
                     {
-                        // TODO: write .txt
                         calculatorHistory.Add(new()
                         {
                             Expression1 = txt_expression_i.Text,
@@ -83,11 +78,11 @@ namespace Proyecto
                             Expression2 = txt_expression_ii.Text,
                             Observations = "Lexical error"
                         });
+                        WriteFile(txt_expression_i.Text, txt_expression_ii.Text, "Lexical error");
                     }
                 }
                 else
                 {
-                    // TODO: write .txt
                     calculatorHistory.Add(new()
                     {
                         Expression1 = txt_expression_i.Text,
@@ -95,12 +90,11 @@ namespace Proyecto
                         Expression2 = txt_expression_ii.Text,
                         Observations = "Semantic error"
                     });
+                    WriteFile(txt_expression_i.Text, txt_expression_ii.Text, "Semantic error");
                 }
             }
             else
             {
-                // TODO: write .txt
-                // TODO: write .txt
                 calculatorHistory.Add(new()
                 {
                     Expression1 = txt_expression_i.Text,
@@ -108,6 +102,7 @@ namespace Proyecto
                     Expression2 = txt_expression_ii.Text,
                     Observations = "Syntax error"
                 });
+                WriteFile(txt_expression_i.Text, txt_expression_ii.Text, "Syntax error");
             }
             dgv_main.DataSource = null;
             dgv_main.DataSource = calculatorHistory;
@@ -147,6 +142,26 @@ namespace Proyecto
         private void btn_delete_Click(object sender, EventArgs e)
         {
             currentOperation = string.Empty;
+        }
+        private void WriteFile(string expression1, string expression2, string error)
+        {
+            string folder = @"C:\Temp\";
+            string fileName = "proyect_errors.txt";
+            string path = $"{folder}/{fileName}";
+            if (!Directory.Exists(folder))
+            {
+                Directory.CreateDirectory(folder);
+            }
+            if (File.Exists(path))
+            {
+                StreamWriter writer = File.AppendText(path);
+                writer.WriteLine($"\n{expression1}/{currentOperation}/{expression2}/{error}");
+                writer.Close();
+            }
+            else
+            {
+                File.WriteAllText(path, $"{expression1}/{currentOperation}/{expression2}/{error}");
+            }
         }
     }
 }
