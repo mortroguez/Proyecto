@@ -29,227 +29,104 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
-            this.btn_minus = new System.Windows.Forms.Button();
-            this.btn_0 = new System.Windows.Forms.Button();
-            this.btn_plus = new System.Windows.Forms.Button();
-            this.btn_1 = new System.Windows.Forms.Button();
-            this.btn_2 = new System.Windows.Forms.Button();
-            this.btn_3 = new System.Windows.Forms.Button();
-            this.btn_4 = new System.Windows.Forms.Button();
-            this.btn_5 = new System.Windows.Forms.Button();
-            this.btn_6 = new System.Windows.Forms.Button();
-            this.btn_7 = new System.Windows.Forms.Button();
-            this.btn_8 = new System.Windows.Forms.Button();
-            this.btn_9 = new System.Windows.Forms.Button();
-            this.btn_equals = new System.Windows.Forms.Button();
+            this.btn_addition = new System.Windows.Forms.Button();
+            this.btn_subtraction = new System.Windows.Forms.Button();
             this.btn_multiplication = new System.Windows.Forms.Button();
             this.btn_division = new System.Windows.Forms.Button();
+            this.btn_clear_all = new System.Windows.Forms.Button();
+            this.btn_result = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_display_history = new System.Windows.Forms.TextBox();
-            this.txt_main_display = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Expression = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Operation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgv_main = new System.Windows.Forms.DataGridView();
+            this.lbl_expression_i = new System.Windows.Forms.Label();
+            this.lbl_expression_ii = new System.Windows.Forms.Label();
+            this.txt_expression_i = new System.Windows.Forms.TextBox();
+            this.txt_expression_ii = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_main)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_minus
+            // btn_addition
             // 
-            this.btn_minus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btn_minus.FlatAppearance.BorderSize = 0;
-            this.btn_minus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_minus.ForeColor = System.Drawing.Color.Snow;
-            this.btn_minus.Location = new System.Drawing.Point(12, 264);
-            this.btn_minus.Name = "btn_minus";
-            this.btn_minus.Size = new System.Drawing.Size(50, 40);
-            this.btn_minus.TabIndex = 0;
-            this.btn_minus.Text = "-";
-            this.btn_minus.UseVisualStyleBackColor = false;
+            this.btn_addition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.btn_addition.FlatAppearance.BorderSize = 0;
+            this.btn_addition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addition.ForeColor = System.Drawing.Color.Snow;
+            this.btn_addition.Location = new System.Drawing.Point(12, 218);
+            this.btn_addition.Name = "btn_addition";
+            this.btn_addition.Size = new System.Drawing.Size(106, 40);
+            this.btn_addition.TabIndex = 3;
+            this.btn_addition.Text = "Adittion";
+            this.btn_addition.UseVisualStyleBackColor = false;
+            this.btn_addition.Click += new System.EventHandler(this.btn_addition_Click);
             // 
-            // btn_0
+            // btn_subtraction
             // 
-            this.btn_0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btn_0.FlatAppearance.BorderSize = 0;
-            this.btn_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_0.ForeColor = System.Drawing.Color.Snow;
-            this.btn_0.Location = new System.Drawing.Point(68, 264);
-            this.btn_0.Name = "btn_0";
-            this.btn_0.Size = new System.Drawing.Size(50, 40);
-            this.btn_0.TabIndex = 1;
-            this.btn_0.Text = "0";
-            this.btn_0.UseVisualStyleBackColor = false;
-            // 
-            // btn_plus
-            // 
-            this.btn_plus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btn_plus.FlatAppearance.BorderSize = 0;
-            this.btn_plus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_plus.ForeColor = System.Drawing.Color.Snow;
-            this.btn_plus.Location = new System.Drawing.Point(124, 264);
-            this.btn_plus.Name = "btn_plus";
-            this.btn_plus.Size = new System.Drawing.Size(50, 40);
-            this.btn_plus.TabIndex = 2;
-            this.btn_plus.Text = "+";
-            this.btn_plus.UseVisualStyleBackColor = false;
-            // 
-            // btn_1
-            // 
-            this.btn_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btn_1.FlatAppearance.BorderSize = 0;
-            this.btn_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_1.ForeColor = System.Drawing.Color.Snow;
-            this.btn_1.Location = new System.Drawing.Point(12, 218);
-            this.btn_1.Name = "btn_1";
-            this.btn_1.Size = new System.Drawing.Size(50, 40);
-            this.btn_1.TabIndex = 3;
-            this.btn_1.Text = "1";
-            this.btn_1.UseVisualStyleBackColor = false;
-            // 
-            // btn_2
-            // 
-            this.btn_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btn_2.FlatAppearance.BorderSize = 0;
-            this.btn_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_2.ForeColor = System.Drawing.Color.Snow;
-            this.btn_2.Location = new System.Drawing.Point(68, 218);
-            this.btn_2.Name = "btn_2";
-            this.btn_2.Size = new System.Drawing.Size(50, 40);
-            this.btn_2.TabIndex = 4;
-            this.btn_2.Text = "2";
-            this.btn_2.UseVisualStyleBackColor = false;
-            // 
-            // btn_3
-            // 
-            this.btn_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btn_3.FlatAppearance.BorderSize = 0;
-            this.btn_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_3.ForeColor = System.Drawing.Color.Snow;
-            this.btn_3.Location = new System.Drawing.Point(124, 218);
-            this.btn_3.Name = "btn_3";
-            this.btn_3.Size = new System.Drawing.Size(50, 40);
-            this.btn_3.TabIndex = 5;
-            this.btn_3.Text = "3";
-            this.btn_3.UseVisualStyleBackColor = false;
-            // 
-            // btn_4
-            // 
-            this.btn_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btn_4.FlatAppearance.BorderSize = 0;
-            this.btn_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_4.ForeColor = System.Drawing.Color.Snow;
-            this.btn_4.Location = new System.Drawing.Point(12, 172);
-            this.btn_4.Name = "btn_4";
-            this.btn_4.Size = new System.Drawing.Size(50, 40);
-            this.btn_4.TabIndex = 6;
-            this.btn_4.Text = "4";
-            this.btn_4.UseVisualStyleBackColor = false;
-            // 
-            // btn_5
-            // 
-            this.btn_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btn_5.FlatAppearance.BorderSize = 0;
-            this.btn_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_5.ForeColor = System.Drawing.Color.Snow;
-            this.btn_5.Location = new System.Drawing.Point(68, 172);
-            this.btn_5.Name = "btn_5";
-            this.btn_5.Size = new System.Drawing.Size(50, 40);
-            this.btn_5.TabIndex = 7;
-            this.btn_5.Text = "5";
-            this.btn_5.UseVisualStyleBackColor = false;
-            // 
-            // btn_6
-            // 
-            this.btn_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btn_6.FlatAppearance.BorderSize = 0;
-            this.btn_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_6.ForeColor = System.Drawing.Color.Snow;
-            this.btn_6.Location = new System.Drawing.Point(124, 172);
-            this.btn_6.Name = "btn_6";
-            this.btn_6.Size = new System.Drawing.Size(50, 40);
-            this.btn_6.TabIndex = 8;
-            this.btn_6.Text = "6";
-            this.btn_6.UseVisualStyleBackColor = false;
-            // 
-            // btn_7
-            // 
-            this.btn_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btn_7.FlatAppearance.BorderSize = 0;
-            this.btn_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_7.ForeColor = System.Drawing.Color.Snow;
-            this.btn_7.Location = new System.Drawing.Point(12, 126);
-            this.btn_7.Name = "btn_7";
-            this.btn_7.Size = new System.Drawing.Size(50, 40);
-            this.btn_7.TabIndex = 9;
-            this.btn_7.Text = "7";
-            this.btn_7.UseVisualStyleBackColor = false;
-            // 
-            // btn_8
-            // 
-            this.btn_8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btn_8.FlatAppearance.BorderSize = 0;
-            this.btn_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_8.ForeColor = System.Drawing.Color.Snow;
-            this.btn_8.Location = new System.Drawing.Point(68, 126);
-            this.btn_8.Name = "btn_8";
-            this.btn_8.Size = new System.Drawing.Size(50, 40);
-            this.btn_8.TabIndex = 10;
-            this.btn_8.Text = "8";
-            this.btn_8.UseVisualStyleBackColor = false;
-            // 
-            // btn_9
-            // 
-            this.btn_9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btn_9.FlatAppearance.BorderSize = 0;
-            this.btn_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_9.ForeColor = System.Drawing.Color.Snow;
-            this.btn_9.Location = new System.Drawing.Point(124, 126);
-            this.btn_9.Name = "btn_9";
-            this.btn_9.Size = new System.Drawing.Size(50, 40);
-            this.btn_9.TabIndex = 11;
-            this.btn_9.Text = "9";
-            this.btn_9.UseVisualStyleBackColor = false;
-            // 
-            // btn_equals
-            // 
-            this.btn_equals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
-            this.btn_equals.FlatAppearance.BorderSize = 0;
-            this.btn_equals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_equals.ForeColor = System.Drawing.Color.Snow;
-            this.btn_equals.Location = new System.Drawing.Point(180, 264);
-            this.btn_equals.Name = "btn_equals";
-            this.btn_equals.Size = new System.Drawing.Size(50, 40);
-            this.btn_equals.TabIndex = 12;
-            this.btn_equals.Text = "=";
-            this.btn_equals.UseVisualStyleBackColor = false;
+            this.btn_subtraction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.btn_subtraction.FlatAppearance.BorderSize = 0;
+            this.btn_subtraction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_subtraction.ForeColor = System.Drawing.Color.Snow;
+            this.btn_subtraction.Location = new System.Drawing.Point(124, 218);
+            this.btn_subtraction.Name = "btn_subtraction";
+            this.btn_subtraction.Size = new System.Drawing.Size(106, 40);
+            this.btn_subtraction.TabIndex = 5;
+            this.btn_subtraction.Text = "Subtraction";
+            this.btn_subtraction.UseVisualStyleBackColor = false;
+            this.btn_subtraction.Click += new System.EventHandler(this.btn_subtraction_Click);
             // 
             // btn_multiplication
             // 
-            this.btn_multiplication.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.btn_multiplication.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.btn_multiplication.FlatAppearance.BorderSize = 0;
             this.btn_multiplication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_multiplication.ForeColor = System.Drawing.Color.Snow;
-            this.btn_multiplication.Location = new System.Drawing.Point(180, 218);
+            this.btn_multiplication.Location = new System.Drawing.Point(12, 172);
             this.btn_multiplication.Name = "btn_multiplication";
-            this.btn_multiplication.Size = new System.Drawing.Size(50, 40);
-            this.btn_multiplication.TabIndex = 13;
-            this.btn_multiplication.Text = "*";
+            this.btn_multiplication.Size = new System.Drawing.Size(106, 40);
+            this.btn_multiplication.TabIndex = 6;
+            this.btn_multiplication.Text = "Multiplication";
             this.btn_multiplication.UseVisualStyleBackColor = false;
+            this.btn_multiplication.Click += new System.EventHandler(this.btn_multiplication_Click);
             // 
             // btn_division
             // 
-            this.btn_division.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.btn_division.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.btn_division.FlatAppearance.BorderSize = 0;
             this.btn_division.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_division.ForeColor = System.Drawing.Color.Snow;
-            this.btn_division.Location = new System.Drawing.Point(180, 172);
+            this.btn_division.Location = new System.Drawing.Point(124, 172);
             this.btn_division.Name = "btn_division";
-            this.btn_division.Size = new System.Drawing.Size(50, 40);
-            this.btn_division.TabIndex = 14;
-            this.btn_division.Text = "/";
+            this.btn_division.Size = new System.Drawing.Size(106, 40);
+            this.btn_division.TabIndex = 8;
+            this.btn_division.Text = "Division";
             this.btn_division.UseVisualStyleBackColor = false;
+            this.btn_division.Click += new System.EventHandler(this.btn_division_Click);
+            // 
+            // btn_clear_all
+            // 
+            this.btn_clear_all.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.btn_clear_all.FlatAppearance.BorderSize = 0;
+            this.btn_clear_all.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clear_all.ForeColor = System.Drawing.Color.Snow;
+            this.btn_clear_all.Location = new System.Drawing.Point(12, 126);
+            this.btn_clear_all.Name = "btn_clear_all";
+            this.btn_clear_all.Size = new System.Drawing.Size(106, 40);
+            this.btn_clear_all.TabIndex = 9;
+            this.btn_clear_all.Text = "CE";
+            this.btn_clear_all.UseVisualStyleBackColor = false;
+            this.btn_clear_all.Click += new System.EventHandler(this.btn_clear_all_Click);
+            // 
+            // btn_result
+            // 
+            this.btn_result.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.btn_result.FlatAppearance.BorderSize = 0;
+            this.btn_result.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_result.ForeColor = System.Drawing.Color.Snow;
+            this.btn_result.Location = new System.Drawing.Point(12, 264);
+            this.btn_result.Name = "btn_result";
+            this.btn_result.Size = new System.Drawing.Size(218, 40);
+            this.btn_result.TabIndex = 12;
+            this.btn_result.Text = "Result";
+            this.btn_result.UseVisualStyleBackColor = false;
+            this.btn_result.Click += new System.EventHandler(this.btn_result_Click);
             // 
             // btn_delete
             // 
@@ -257,146 +134,118 @@
             this.btn_delete.FlatAppearance.BorderSize = 0;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
-            this.btn_delete.Location = new System.Drawing.Point(180, 126);
+            this.btn_delete.Location = new System.Drawing.Point(124, 126);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(50, 40);
+            this.btn_delete.Size = new System.Drawing.Size(106, 40);
             this.btn_delete.TabIndex = 15;
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
-            // panel1
+            // dgv_main
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Controls.Add(this.txt_display_history);
-            this.panel1.Controls.Add(this.txt_main_display);
-            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(218, 108);
-            this.panel1.TabIndex = 16;
+            this.dgv_main.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.dgv_main.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_main.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dgv_main.ColumnHeadersHeight = 20;
+            this.dgv_main.Location = new System.Drawing.Point(247, 12);
+            this.dgv_main.Name = "dgv_main";
+            this.dgv_main.ReadOnly = true;
+            this.dgv_main.RowHeadersWidth = 35;
+            this.dgv_main.RowTemplate.Height = 25;
+            this.dgv_main.Size = new System.Drawing.Size(405, 292);
+            this.dgv_main.TabIndex = 17;
             // 
-            // txt_display_history
+            // lbl_expression_i
             // 
-            this.txt_display_history.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_display_history.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_display_history.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_display_history.ForeColor = System.Drawing.Color.Snow;
-            this.txt_display_history.Location = new System.Drawing.Point(0, 0);
-            this.txt_display_history.Multiline = true;
-            this.txt_display_history.Name = "txt_display_history";
-            this.txt_display_history.Size = new System.Drawing.Size(218, 86);
-            this.txt_display_history.TabIndex = 17;
-            this.txt_display_history.Text = "1 + 1 =";
-            this.txt_display_history.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lbl_expression_i.AutoSize = true;
+            this.lbl_expression_i.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_expression_i.ForeColor = System.Drawing.Color.Snow;
+            this.lbl_expression_i.Location = new System.Drawing.Point(12, 18);
+            this.lbl_expression_i.Name = "lbl_expression_i";
+            this.lbl_expression_i.Size = new System.Drawing.Size(90, 15);
+            this.lbl_expression_i.TabIndex = 18;
+            this.lbl_expression_i.Text = "Expression 1";
             // 
-            // txt_main_display
+            // lbl_expression_ii
             // 
-            this.txt_main_display.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_main_display.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_main_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_main_display.ForeColor = System.Drawing.Color.Snow;
-            this.txt_main_display.Location = new System.Drawing.Point(0, 86);
-            this.txt_main_display.Name = "txt_main_display";
-            this.txt_main_display.Size = new System.Drawing.Size(218, 22);
-            this.txt_main_display.TabIndex = 17;
-            this.txt_main_display.Text = "2";
-            this.txt_main_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lbl_expression_ii.AutoSize = true;
+            this.lbl_expression_ii.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_expression_ii.ForeColor = System.Drawing.Color.Snow;
+            this.lbl_expression_ii.Location = new System.Drawing.Point(12, 71);
+            this.lbl_expression_ii.Name = "lbl_expression_ii";
+            this.lbl_expression_ii.Size = new System.Drawing.Size(90, 15);
+            this.lbl_expression_ii.TabIndex = 19;
+            this.lbl_expression_ii.Text = "Expression 2";
             // 
-            // dataGridView1
+            // txt_expression_i
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dataGridView1.ColumnHeadersHeight = 20;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Expression,
-            this.Operation,
-            this.dataGridViewTextBoxColumn1});
-            this.dataGridView1.Location = new System.Drawing.Point(247, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 35;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(304, 292);
-            this.dataGridView1.TabIndex = 17;
+            this.txt_expression_i.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.txt_expression_i.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_expression_i.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txt_expression_i.ForeColor = System.Drawing.Color.Snow;
+            this.txt_expression_i.Location = new System.Drawing.Point(124, 18);
+            this.txt_expression_i.Name = "txt_expression_i";
+            this.txt_expression_i.Size = new System.Drawing.Size(106, 19);
+            this.txt_expression_i.TabIndex = 20;
+            this.txt_expression_i.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Expression
+            // txt_expression_ii
             // 
-            this.Expression.HeaderText = "Expression";
-            this.Expression.Name = "Expression";
-            this.Expression.ReadOnly = true;
-            // 
-            // Operation
-            // 
-            this.Operation.HeaderText = "Operation";
-            this.Operation.Name = "Operation";
-            this.Operation.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Expression";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.txt_expression_ii.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.txt_expression_ii.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_expression_ii.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txt_expression_ii.ForeColor = System.Drawing.Color.Snow;
+            this.txt_expression_ii.Location = new System.Drawing.Point(124, 68);
+            this.txt_expression_ii.Name = "txt_expression_ii";
+            this.txt_expression_ii.Size = new System.Drawing.Size(106, 19);
+            this.txt_expression_ii.TabIndex = 21;
+            this.txt_expression_ii.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(563, 316);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(664, 316);
+            this.Controls.Add(this.txt_expression_ii);
+            this.Controls.Add(this.txt_expression_i);
+            this.Controls.Add(this.lbl_expression_ii);
+            this.Controls.Add(this.lbl_expression_i);
+            this.Controls.Add(this.dgv_main);
             this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_result);
+            this.Controls.Add(this.btn_clear_all);
             this.Controls.Add(this.btn_division);
             this.Controls.Add(this.btn_multiplication);
-            this.Controls.Add(this.btn_equals);
-            this.Controls.Add(this.btn_9);
-            this.Controls.Add(this.btn_8);
-            this.Controls.Add(this.btn_7);
-            this.Controls.Add(this.btn_6);
-            this.Controls.Add(this.btn_5);
-            this.Controls.Add(this.btn_4);
-            this.Controls.Add(this.btn_3);
-            this.Controls.Add(this.btn_2);
-            this.Controls.Add(this.btn_1);
-            this.Controls.Add(this.btn_plus);
-            this.Controls.Add(this.btn_0);
-            this.Controls.Add(this.btn_minus);
+            this.Controls.Add(this.btn_subtraction);
+            this.Controls.Add(this.btn_addition);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(680, 355);
+            this.MinimumSize = new System.Drawing.Size(680, 355);
             this.Name = "Calculator";
             this.Opacity = 0.98D;
             this.Text = "Calculator";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Calculator_Closing);
             this.Load += new System.EventHandler(this.Calculator_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_main)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Button btn_minus;
-        private Button btn_0;
-        private Button btn_plus;
-        private Button btn_1;
-        private Button btn_2;
-        private Button btn_3;
-        private Button btn_4;
-        private Button btn_5;
-        private Button btn_6;
-        private Button btn_7;
-        private Button btn_8;
-        private Button btn_9;
-        private Button btn_equals;
+        private Button btn_addition;
+        private Button btn_subtraction;
         private Button btn_multiplication;
+        private Button btn_clear_all;
+        private Button btn_result;
         private Button btn_division;
         private Button btn_delete;
-        private Panel panel1;
-        private TextBox txt_display_history;
-        private TextBox txt_main_display;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Expression;
-        private DataGridViewTextBoxColumn Operation;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridView dgv_main;
+        private Label lbl_expression_i;
+        private Label lbl_expression_ii;
+        private TextBox txt_expression_i;
+        private TextBox txt_expression_ii;
     }
 }
