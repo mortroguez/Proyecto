@@ -27,6 +27,12 @@ namespace Proyecto
             calculator.Show(this);
         }
 
+        private void btn_regex_Click(object sender, EventArgs e)
+        {
+            var regex = new RegexCheck();
+            regex.Show(this);
+        }
+
         private void btn_git_Click(object sender, EventArgs e)
         {
             ProcessStartInfo psInfo = new ProcessStartInfo

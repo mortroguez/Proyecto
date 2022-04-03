@@ -65,6 +65,7 @@
             this.btn_regex.TabIndex = 1;
             this.btn_regex.Text = "Regex";
             this.btn_regex.UseVisualStyleBackColor = false;
+            this.btn_regex.Click += new System.EventHandler(this.btn_regex_Click);
             // 
             // label1
             // 
